@@ -41,6 +41,7 @@ The main body of the model is found in the `Core_Model` folder. This contains fo
 The calculations used to write the paper are all contained here. They are all numbered and should be run in sequence (as some calculations rely on results from earlier calculations) A python script (`all.py`) runs everything but takes about 10 minutes to do it: this is not ~~particularly~~ efficient code... Each `.py` file relates to a corresponding results folder and saves calculated values as `.csv` files. Within each of these folders, further `.py` files exist to produce figures and charts from the paper.
 
 # Code Edits & bug reports 
-We absolutely want this code to be freely available, and welcome any useful modifications, upgrades, and bug reports. However, in order to maintain this version of the code (as best matching the findings of the **paper**) these should be directed to the master branch of the code at `[a new repository that I haven't set up yet]`
+We absolutely want this code to be freely available, and welcome any useful modifications, upgrades, and bug reports.
+Please do be aware, however that 1) this is not the most up to date version of the model (simply a snapshot showing the status of the model when the __paper__ was written) and 2) we would like this version to remain as is for reference. 
 
-
+Please can you either fork this code, or direct any content changes, or comments etc. to the most recent branch of the code at `[a new repository that I haven't set up yet]`
