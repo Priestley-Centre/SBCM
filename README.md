@@ -1,5 +1,5 @@
 # Draft content. 
-# NB this model is not finalised, and comes with a gigantic health warning. __**Really__**. You're better ignoring it until it's ready to go.
+# NB this model is not finalised, and comes with a gigantic health warning. *__Really__*. You're better ignoring it until it's ready to go.
 # Basic installation instructions
 
 1. If you don't already have python installed, you should first go [here](https://www.anaconda.com/distribution/) and install the anaconda distribution. 
