@@ -25,9 +25,6 @@ def mpl_font_setup(font_type="Garamond"):
     plt.rcParams["font.family"] = font_type
 
 
-
-
-
 def forest_labels(text, short="star", eng=False):
     """Returns the text label of the species code"""
     name_dict = {
