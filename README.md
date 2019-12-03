@@ -1,3 +1,4 @@
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 # Draft content. 
 # NB this model is not finalised, and comes with a gigantic health warning.
 
