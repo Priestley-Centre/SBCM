@@ -41,4 +41,3 @@ The calculations used to write the paper are all contained here. They are all nu
 We absolutely want this code to be freely available, and welcome any useful modifications, upgrades, and bug reports.
 Please do be aware, however that 1) this is not the most up to date version of the model (simply a snapshot showing the status of the model when the __paper__ was written) and 2) we would like this version to remain as is for reference. 
 
-Please can you either fork this code, or direct any content changes, or comments etc. to the most recent branch of the code at `[a new repository that I haven't set up yet]`
