@@ -7,7 +7,7 @@
 - Figure 6	07_years_to_payback_results
 - Figure 7	08_time_variability_comparison_results
  
-#Locations for code to generate tabulated data
+# Locations for code to generate tabulated data
 - Table 1		- 
 - Table 2		-
 - Table 3		-
