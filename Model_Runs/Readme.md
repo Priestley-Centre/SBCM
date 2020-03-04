@@ -15,4 +15,6 @@
 - Table 5     10_error_margins_results
 - Table 6     10_error_margins_results
 - Table 7     04a_curve_fit_best_results
+
+NB. this is a little jumbled. It's mainly in the order we used when generating the data used in the paper (things that were generated later occur later in the list.) We have not updated this because later code tends to depend on earlier code (even if we haven't displayed the results in the same order in the paper.) 
     
