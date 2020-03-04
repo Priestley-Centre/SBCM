@@ -7,8 +7,12 @@ data_rmse = pd.read_csv(f"04_curve_fit_subset_results\\summary.csv", index_col=0
 # spp = ["NE_MBB"]
 for sp in spp:
     data_usda = pd.read_csv(f"05_full_params_run_results\\{sp}_usda.csv", index_col=0)
-    data_bio = pd.read_csv(f"05_full_params_run_results\\{sp}_sbcm_bio.csv", index_col=0)
-    data_soil = pd.read_csv(f"05_full_params_run_results\\{sp}_sbcm_soil.csv", index_col=0)
+    data_bio = pd.read_csv(
+        f"05_full_params_run_results\\{sp}_sbcm_bio.csv", index_col=0
+    )
+    data_soil = pd.read_csv(
+        f"05_full_params_run_results\\{sp}_sbcm_soil.csv", index_col=0
+    )
     output = pd.DataFrame(index=np.arange(-1, 10001, 1))
     #    output_bio = pd.DataFrame(index=np.arange(0,501,1))
 

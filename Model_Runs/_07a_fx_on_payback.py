@@ -23,8 +23,12 @@ for i in intervals:
         pdata = pd.read_csv(
             f"04_curve_fit_subset_results\\{sp}_param_data.csv", index_col=0
         )
-        bdata = pd.read_csv(f"05_full_params_run_results\\{sp}_SBCM_bio.csv", index_col=0)
-        sdata = pd.read_csv(f"05_full_params_run_results\\{sp}_SBCM_soil.csv", index_col=0)
+        bdata = pd.read_csv(
+            f"05_full_params_run_results\\{sp}_SBCM_bio.csv", index_col=0
+        )
+        sdata = pd.read_csv(
+            f"05_full_params_run_results\\{sp}_SBCM_soil.csv", index_col=0
+        )
         pcols = list(pdata.columns.values)
         payback_values = []
         for col in pcols:

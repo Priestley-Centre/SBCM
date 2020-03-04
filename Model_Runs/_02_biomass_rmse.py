@@ -13,8 +13,9 @@ import numpy as np
 import warnings
 from sklearn.metrics import mean_squared_error as mse
 
+
 def rmse(y1, y2):
-    return np.sqrt(mse(y1,y2))
+    return np.sqrt(mse(y1, y2))
 
 
 def growth(x, pb, ps, B, phi_ab, k, v, phi_ba, phi_bs, phi_sa):

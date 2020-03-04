@@ -8,9 +8,11 @@ import pandas as pd
 from variables import SPP
 import numpy as np
 
+
 def oprint(text, end="\n"):
     if __name__ == "__main__":
         print(text, end=end)
+
 
 summary = pd.read_csv(f"03_curve_fit_results\\summary.csv", index_col=0)
 summary2 = summary
@@ -48,16 +50,13 @@ with pd.ExcelWriter(
             col3 = gcols[(col_index * 2 + 1) + 2]
             oprint(f"{col:40}", end="")
 
-
-
-            if (pdata.loc["RMSE", col] <= comparison_value):
+            if pdata.loc["RMSE", col] <= comparison_value:
                 oprint("...pass")
                 pdata2[col] = pdata[col]
                 gdata2[col2] = gdata[col2]
                 gdata2[col3] = gdata[col3]
             else:
                 oprint("...fail")
-
 
         pdata2.to_csv(f"04_curve_fit_subset_results\\{sp}_param_data.csv")
         gdata2.to_csv(f"04_curve_fit_subset_results\\{sp}_raw_data.csv")

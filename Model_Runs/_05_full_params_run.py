@@ -2,6 +2,8 @@
 add docstring
 
 """
+
+
 def oprint(text, end="\n"):
     if __name__ == "__main__":
         print(text, end=end)
@@ -33,7 +35,9 @@ max_year = 10000
 # spp = ["NE_MBB"]
 for sp in spp:
     oprint(f"{sp}...")
-    pdata = pd.read_csv(f"04_curve_fit_subset_results\\{sp}_param_data.csv", index_col=0)
+    pdata = pd.read_csv(
+        f"04_curve_fit_subset_results\\{sp}_param_data.csv", index_col=0
+    )
     pcols = list(pdata.columns.values)
 
     output1 = pd.DataFrame(index=var.original_biomass_data[sp]["x"])
@@ -94,5 +98,5 @@ for sp in spp:
 
 if __name__ == "__main__":
     output3.to_clipboard()
-    winsound.Beep(262, 500) # In case you care, this is middle C (more or less)
+    winsound.Beep(262, 500)  # In case you care, this is middle C (more or less)
 summary.to_csv(f"05_full_params_run_results\\eqm_summary.csv")

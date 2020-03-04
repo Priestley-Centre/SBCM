@@ -17,7 +17,9 @@ for sp in spp:  # Yeah, hard-coded variables. These come from the USDA data
 
     output = pd.DataFrame()
     y_data1 = pd.read_csv(f"05_full_params_run_results\\{sp}_sbcm_bio.csv", index_col=0)
-    y_data2 = pd.read_csv(f"05_full_params_run_results\\{sp}_sbcm_soil.csv", index_col=0)
+    y_data2 = pd.read_csv(
+        f"05_full_params_run_results\\{sp}_sbcm_soil.csv", index_col=0
+    )
     x_data = pd.read_csv(
         f"06_years_to_maturity_results\\{sp}_maturity_soil.csv", index_col=0
     )
