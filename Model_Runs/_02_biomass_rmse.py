@@ -11,13 +11,10 @@ import pandas as pd
 import variables as var
 import numpy as np
 import warnings
-
+from sklearn.metrics import mean_squared_error as mse
 
 def rmse(y1, y2):
-    """Returns root mean squared error
-    This is the mean of absolute differences between datasets
-    y1 and y2 (both lists)"""
-    return np.mean([abs(a - b) for a, b in zip(y1, y2)])
+    return np.sqrt(mse(y1,y2))
 
 
 def growth(x, pb, ps, B, phi_ab, k, v, phi_ba, phi_bs, phi_sa):
@@ -99,9 +96,9 @@ for sp in species_list:
     rmse_soil = rmse(out["soil_carbon"], out["USDA_soil_carbon"])
     biomass_rmse_list.append(rmse_bio)
     soil_rmse_list.append(rmse_soil)
-    out.to_csv(f"biomass_rmse_results\\{sp} growth results.csv")
+    out.to_csv(f"02_biomass_rmse_results\\{sp} growth results.csv")
 output["Soil RMSE"] = soil_rmse_list
 output["Biomass RMSE"] = biomass_rmse_list
-output.to_csv("biomass_rmse_results\\RMSE_scores.csv")
+output.to_csv("02_biomass_rmse_results\\RMSE_scores.csv")
 if __name__ == "__main__":
     print(output.to_string())

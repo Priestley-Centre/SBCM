@@ -8,7 +8,7 @@ from variables import SPP as spp
 
 
 x_data = pd.read_csv(
-    "years_to_maturity_results\\years to maturity (soil).csv", index_col=0
+    "06_years_to_maturity_results\\years to maturity (soil).csv", index_col=0
 )
 x_data = x_data.T
 
@@ -25,8 +25,8 @@ x_data["SE_SLP"] = x_data2["SE_SLP"]
 x_data["SE_LSP"] = x_data2["SE_LSP"]
 
 x_data = x_data.T
-x_data.to_csv(f"time_variability_comparison_results\\time.csv")
-y_data = pd.read_csv("full_params_run_results\\eqm_summary.csv", index_col=0)
+x_data.to_csv(f"08_time_variability_comparison_results\\time.csv")
+y_data = pd.read_csv("05_full_params_run_results\\eqm_summary.csv", index_col=0)
 if __name__ == "__main__":
     print(x_data)
     print(y_data)
@@ -44,4 +44,4 @@ for sp in spp:
 if __name__ == "__main__":
     print(y_values.to_string(), "\n")
 
-y_values.to_csv(f"time_variability_comparison_results\\site_carbon.csv")
+y_values.to_csv(f"08_time_variability_comparison_results\\site_carbon.csv")

@@ -5,13 +5,13 @@ import formatting as form
 
 years = [25, 50, 100, 150, 200, 250, 500, 1000]
 
-summary = pd.read_csv(f"curve_fit_subset_results\\summary.csv", index_col=0)
+summary = pd.read_csv(f"04_curve_fit_subset_results\\summary.csv", index_col=0)
 output = pd.DataFrame(index=years)
 # spp = ["NE_MBB"]
 
 # Find the best match (same as curve fit best.py)
 for sp in spp:
-    data = pd.read_csv(f"curve_fit_subset_results\\{sp}_param_data.csv", index_col=0)
+    data = pd.read_csv(f"04_curve_fit_subset_results\\{sp}_param_data.csv", index_col=0)
     #    print(data.columns.values)
     x = summary.index[summary[sp] == summary[sp].min()]
     x = str(x[0])
@@ -21,13 +21,13 @@ for sp in spp:
     x = f"{sp} {x}"
 
     data_bio_best = pd.read_csv(
-        f"full_params_run_results\\{sp}_sbcm_bio.csv", index_col=0
+        f"05_full_params_run_results\\{sp}_sbcm_bio.csv", index_col=0
     )
     data_soil_best = pd.read_csv(
-        f"full_params_run_results\\{sp}_sbcm_soil.csv", index_col=0
+        f"05_full_params_run_results\\{sp}_sbcm_soil.csv", index_col=0
     )
 
-    uncertainty_data = pd.read_csv(f"full_params_run_results\\{sp}_uncertainty.csv")
+    uncertainty_data = pd.read_csv(f"05_full_params_run_results\\{sp}_uncertainty.csv")
 
     #    print(data_bio.columns.values)
 
@@ -76,7 +76,7 @@ for sp in spp:
     output[f"{sp} bio best"] = np.round(output[f"{sp} bio best"], 1)
     output[f"{sp} soil best"] = np.round(output[f"{sp} soil best"], 1)
 
-output.to_csv(r"error_margins_results\summary.csv")
+output.to_csv(r"10_error_margins_results\summary.csv")
 output2 = pd.DataFrame(index=output.index.values)
 for sp in spp:
     forest_list = []
@@ -87,15 +87,15 @@ for sp in spp:
         output2.index.values
     ):  # NB dropping some random characters in here to allow word find/replace for proper formatting
         forest_list.append(
-            f'{output.loc[i,f"{sp} bio best"]} #+{output.loc[i,f"{sp} bio max"]}@#{output.loc[i,f"{sp} bio min"]}'
+            f'{output.loc[i,f"{sp} bio best"]} @+{output.loc[i,f"{sp} bio max"]}#{output.loc[i,f"{sp} bio min"]}'
         )
         soil_list.append(
-            f'{output.loc[i,f"{sp} soil best"]} #+{output.loc[i,f"{sp} soil max"]}@#{output.loc[i,f"{sp} soil min"]}'
+            f'{output.loc[i,f"{sp} soil best"]} @+{output.loc[i,f"{sp} soil max"]}#{output.loc[i,f"{sp} soil min"]}'
         )
 
     output2[f"{form.forest_labels(sp, eng=True, short=False)} forest"] = forest_list
     output2[f"{form.forest_labels(sp, eng=True, short=False)} soil"] = soil_list
 
-output2.to_csv(r"error_margins_results\formattable table.csv")
+output2.to_csv(r"10_error_margins_results\formattable table.csv")
 if __name__ == "__main__":
     output2.to_clipboard()

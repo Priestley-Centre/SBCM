@@ -38,5 +38,5 @@ for sp in SPP:
     soil_out[sp] = soil
     biomass_out[sp] = biomass
 
-soil_out.to_csv(r"growth_model_illustration\soil.csv")
-biomass_out.to_csv(r"growth_model_illustration\forest.csv")
+soil_out.to_csv(r"09_growth_model_illustration\soil.csv")
+biomass_out.to_csv(r"09_growth_model_illustration\forest.csv")

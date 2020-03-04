@@ -515,3 +515,17 @@ coal_use = {
     "emit1": 0.0015,  # carbon intensity of fossil fuel supply chain (tC/GJ)
     "emit2": 0.025,
 }  # carbon intensity of fossil fuel combustion (tC/GJ)}
+
+new_forest_use = {
+    "eff1": 0.385,  # combustion efficiency for biomass fuels (%)
+    "eff2": 0.725,  # processing efficiency for biomass fuels (%)
+    "emit1": 0.0012,  # carbon intensity of biomass fuel supply chain (tC/GJ)
+    "emit2": 0.027,
+}  # carbon intensity of biomass fuel combustion (tC/GJ)}
+
+new_coal_use = {
+    "eff1": 0.356,  # combustion efficiency for fossil fuels (%)
+    "eff2": 0.89,  # processing efficiency for fossil fuels (%)
+    "emit1": 0.0015,  # carbon intensity of fossil fuel supply chain (tC/GJ)
+    "emit2": 0.025,
+}  # carbon intensity of fossil fuel combustion (tC/GJ)}

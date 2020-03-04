@@ -16,13 +16,44 @@ from datetime import timedelta
 from variables import SPP as spp
 
 
-def mpl_font_setup(font_type="Garamond"):
+def mpl_font_setup(font_type="times New Roman"):
+    """
+    """
+    try:
+        # This is bnecessary to correct the weird mpl handling of italic TNR
+        del matplotlib.font_manager.weight_dict["roman"]
+        matplotlib.font_manager._rebuild()
+    # https://stackoverflow.com/a/44386835/4741979
+    except:
+        pass
+
+    with warnings.catch_warnings():
+        # gets rid of an annoying matplotlib warning because spyder is already
+        # running a graphic backend
+        warnings.simplefilter("ignore")
+    #        matplotlib.use('TkAgg')
+    plt.ioff()
+
     matplotlib.rcParams["mathtext.fontset"] = "custom"
     matplotlib.rcParams["mathtext.cal"] = font_type
     matplotlib.rcParams["mathtext.rm"] = font_type
     matplotlib.rcParams["mathtext.it"] = font_type + ":italic"
     matplotlib.rcParams["mathtext.bf"] = font_type + ":bold"
     plt.rcParams["font.family"] = font_type
+
+
+# def timelog(log="log", time_log=[0, 0]):
+#    now = perf_counter()
+#    if time_log[1] == 0:
+#        output = f"{'-'*120}\n{strftime('%H:%M:%S', localtime())}\t{log:30}"
+#    else:
+#        output = (
+#            f"{'-'*120}\n{strftime('%H:%M:%S', localtime())}"
+#            + f"\t{log:30}\t{timedelta(seconds=now-time_log[0])} "
+#            + f"elapsed\t({timedelta(seconds=now-time_log[1])} for this block)\n"
+#        )
+#    print(output)
+#    return [time_log[0], now]
 
 
 def forest_labels(text, short="star", eng=False):
@@ -113,20 +144,20 @@ def forest_labels(text, short="star", eng=False):
 
 
 title = """
-                        ███████╗██╗███╗   ███╗██████╗ ██╗     ███████╗                                    
-                        ██╔════╝██║████╗ ████║██╔══██╗██║     ██╔════╝                                    
-                        ███████╗██║██╔████╔██║██████╔╝██║     █████╗                                      
-                        ╚════██║██║██║╚██╔╝██║██╔═══╝ ██║     ██╔══╝                                      
-                        ███████║██║██║ ╚═╝ ██║██║     ███████╗███████╗                                    
-                        ╚══════╝╚═╝╚═╝     ╚═╝╚═╝     ╚══════╝╚══════╝                                    
-                                                                                      
-            ██████╗ ██╗ ██████╗ ███████╗███╗   ██╗███████╗██████╗  ██████╗██╗   ██╗           
-            ██╔══██╗██║██╔═══██╗██╔════╝████╗  ██║██╔════╝██╔══██╗██╔════╝╚██╗ ██╔╝           
-            ██████╔╝██║██║   ██║█████╗  ██╔██╗ ██║█████╗  ██████╔╝██║  ███╗╚████╔╝            
-            ██╔══██╗██║██║   ██║██╔══╝  ██║╚██╗██║██╔══╝  ██╔══██╗██║   ██║ ╚██╔╝             
-            ██████╔╝██║╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║╚██████╔╝  ██║              
-            ╚═════╝ ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝ ╚═════╝   ╚═╝              
-                                                                                      
+                        ███████╗██╗███╗   ███╗██████╗ ██╗     ███████╗
+                        ██╔════╝██║████╗ ████║██╔══██╗██║     ██╔════╝
+                        ███████╗██║██╔████╔██║██████╔╝██║     █████╗
+                        ╚════██║██║██║╚██╔╝██║██╔═══╝ ██║     ██╔══╝
+                        ███████║██║██║ ╚═╝ ██║██║     ███████╗███████╗
+                        ╚══════╝╚═╝╚═╝     ╚═╝╚═╝     ╚══════╝╚══════╝
+
+            ██████╗ ██╗ ██████╗ ███████╗███╗   ██╗███████╗██████╗  ██████╗██╗   ██╗
+            ██╔══██╗██║██╔═══██╗██╔════╝████╗  ██║██╔════╝██╔══██╗██╔════╝╚██╗ ██╔╝
+            ██████╔╝██║██║   ██║█████╗  ██╔██╗ ██║█████╗  ██████╔╝██║  ███╗╚████╔╝
+            ██╔══██╗██║██║   ██║██╔══╝  ██║╚██╗██║██╔══╝  ██╔══██╗██║   ██║ ╚██╔╝
+            ██████╔╝██║╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║╚██████╔╝  ██║
+            ╚═════╝ ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝ ╚═════╝   ╚═╝
+
      ██████╗ ██████╗ ███╗   ███╗██████╗  █████╗ ██████╗ ██╗███████╗ ██████╗ ███╗   ██╗
     ██╔════╝██╔═══██╗████╗ ████║██╔══██╗██╔══██╗██╔══██╗██║██╔════╝██╔═══██╗████╗  ██║
     ██║     ██║   ██║██╔████╔██║██████╔╝███████║██████╔╝██║███████╗██║   ██║██╔██╗ ██║
@@ -134,16 +165,15 @@ title = """
     ╚██████╗╚██████╔╝██║ ╚═╝ ██║██║     ██║  ██║██║  ██║██║███████║╚██████╔╝██║ ╚████║
      ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝
 
-                        ███╗   ███╗ ██████╗ ██████╗ ███████╗██╗                                           
-                        ████╗ ████║██╔═══██╗██╔══██╗██╔════╝██║                                           
-                        ██╔████╔██║██║   ██║██║  ██║█████╗  ██║                                           
-                        ██║╚██╔╝██║██║   ██║██║  ██║██╔══╝  ██║                                           
-                        ██║ ╚═╝ ██║╚██████╔╝██████╔╝███████╗███████╗                                      
-                        ╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝╚══════╝                                      
+                        ███╗   ███╗ ██████╗ ██████╗ ███████╗██╗
+                        ████╗ ████║██╔═══██╗██╔══██╗██╔════╝██║
+                        ██╔████╔██║██║   ██║██║  ██║█████╗  ██║
+                        ██║╚██╔╝██║██║   ██║██║  ██║██╔══╝  ██║
+                        ██║ ╚═╝ ██║╚██████╔╝██████╔╝███████╗███████╗
+                        ╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝╚══════╝
 """
 
 if __name__ == "__main__":  # Horrible code.
     for sp in spp:
-        for lan in [True, False]:
-            for form in ["star", False, True]:
-                print(forest_labels(sp, eng=lan, short=form))
+        for lan in [True]:
+            print(forest_labels(sp, eng=lan, short=False))

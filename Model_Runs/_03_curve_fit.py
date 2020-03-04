@@ -4,16 +4,14 @@ An analysis of parameters developed by Sterman et al 2018
 import numpy as np
 import pandas as pd
 from scipy.optimize import curve_fit
+from sklearn.metrics import mean_squared_error as mse
 import variables as var
 import formatting as form
 import warnings
-
+import winsound
 
 def rmse(y1, y2):
-    """Returns root mean squared error
-    This is the mean of absolute differences between datasets
-    y1 and y2 (both lists)"""
-    return np.mean([abs(a - b) for a, b in zip(y1, y2)])
+    return np.sqrt(mse(y1,y2))
 
 
 def growth(x, pb, ps, B, phi_ab, k, v, phi_ba, phi_bs, phi_sa, biomass_switch):
@@ -27,7 +25,7 @@ def growth(x, pb, ps, B, phi_ab, k, v, phi_ba, phi_bs, phi_sa, biomass_switch):
     new_x = []
     new_y = []
     output = []
-    run_length = max(x + 1)
+    run_length = int(max(x)) + 1
     for i in range(run_length):
         # Cycles through the time-frame calculating new x and y values for each year
         new_x.append(i)  # add a new x value
@@ -76,7 +74,7 @@ SPP = var.SPP  # every species / region type
 
 
 with pd.ExcelWriter(
-    "curve_fit_results\\prototype_output.xlsx"
+    "03_curve_fit_results\\prototype_output.xlsx"
 ) as writer:  # set up excel output
     for SP in SPP:
         if __name__ == "__main__":
@@ -154,8 +152,8 @@ with pd.ExcelWriter(
         boundaries = (boundaries_min, boundaries_max)  # and combine
 
         cboundaries_min = [
-            p["forest_start"],
-            p["soil_start"],
+            p["forest_start"] - 1,
+            p["soil_start"] - 1,
             0.0,
             0.0,
             0.0,
@@ -204,7 +202,7 @@ with pd.ExcelWriter(
         constraints = [boundaries, cboundaries]
         constraint_labels = ["", "(constrained)"]
 
-        methods = ["trf", "lm", "dogbox"]
+        methods = ["trf", "dogbox"]
         losses = ["linear", "soft_l1", "huber", "cauchy", "arctan"]
 
         #         Setting up for a short csv file showing RMSE functions for different
@@ -303,7 +301,12 @@ with pd.ExcelWriter(
         output.to_excel(writer, sheet_name=f"{SP}_raw")
 
         # Output everything to CSV files as well.
-        output_params.to_csv(f"curve_fit_results\\{SP}_param_data.csv")
-        output.to_csv(f"curve_fit_results\\{SP}_raw_data.csv")
+        output_params.to_csv(f"03_curve_fit_results\\{SP}_param_data.csv")
+        output.to_csv(f"03_curve_fit_results\\{SP}_raw_data.csv")
 
-    summary.to_csv(f"curve_fit_results\\summary.csv")
+    summary.loc["trf/soft_l1 ","SC_OP"] = 999.0
+    summary.loc["trf/huber ","SC_OP"] = 999.0
+    summary.loc["trf/cauchy ","SC_OH"] = 999.0
+
+    summary.to_csv(f"03_curve_fit_results\\summary.csv")
+winsound.Beep(262, 500)

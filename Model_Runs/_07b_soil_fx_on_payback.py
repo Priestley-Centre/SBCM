@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct 14 11:43:52 2019
+
+@author: earwr
+"""
+
 """
 MORE SLLLLOOOOOWWWWW code
 
@@ -41,14 +48,14 @@ for i in intervals:
             scenario.fell_age = 502
 
             # Playing with this order changes the effect (a bit) as during initialise:
-            # Forest is feleld
+            # Forest is felled
             # area is calculated
-            # so we can end up with a large are with very little biomass, or a smaller
+            # so we can end up with a large area with very little biomass, or a smaller
             # area with loads
             # There is no effect on soil carbon, so that can go anywhere.
-
+            scenario.soil = scenario.soil_start
             scenario.soil = scenario.soil * i
-            scenario.biomass = scenario.biomass * i
+            #            scenario.biomass = scenario.biomass * i
             scenario.initialise()
 
             for _ in range(502):
@@ -61,9 +68,9 @@ for i in intervals:
         summary.loc[sp, "mean"] = np.round(np.mean(payback_values), 1)
         summary.loc[sp, "sterman"] = payback_values[0]
 
-        output.loc[i, f"{sp}_e"] = scenario.energy
-        output.loc[i, f"{sp}_a"] = scenario.area
+        #        output.loc[i, f"{sp}_e"] = scenario.energy
+        #        output.loc[i, f"{sp}_a"] = scenario.area
         output.loc[i, sp] = summary.loc[sp, "sterman"]
     # summary.to_csv(f"years_to_payback_results\\payback_{i}.csv")
 if __name__ == "__main__":
-    summary.to_clipboard()
+    output.to_clipboard()

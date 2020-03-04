@@ -7,7 +7,14 @@ note = """
 ########################################################################################
 
                     Running everything. This will take a LONG TIME.
-                        Go and get a cup of tea or something...
+
+                    Please be aware that the progress bar is deceptive
+                    it will look a lot like it has stopped working.
+                    Of course this *might* have happened, but you can't
+                    really be sure until you have allowed the code to
+                    run for a good long time. In particular, stages
+                    2 and 5 are very slow (5 minutes plus) so I recommend
+                    a tea break while it all chugs away. ~WR
 
 ########################################################################################
 

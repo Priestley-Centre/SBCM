@@ -2,6 +2,9 @@
 add docstring
 
 """
+def oprint(text, end="\n"):
+    if __name__ == "__main__":
+        print(text, end=end)
 
 
 import pandas as pd
@@ -9,6 +12,7 @@ import sbcm
 import variables as var
 from variables import SPP as spp
 import numpy as np
+import winsound
 
 s_cols = [
     "soil_max",
@@ -24,24 +28,24 @@ s_cols = [
 ]
 summary = pd.DataFrame(index=var.SPP, columns=s_cols)
 
-max_year = 5000
+max_year = 10000
 
 # spp = ["NE_MBB"]
 for sp in spp:
-    if __name__ == "__main__":
-        print(f"\n\n{sp}\n")
-    pdata = pd.read_csv(f"curve_fit_subset_results\\{sp}_param_data.csv", index_col=0)
+    oprint(f"{sp}...")
+    pdata = pd.read_csv(f"04_curve_fit_subset_results\\{sp}_param_data.csv", index_col=0)
     pcols = list(pdata.columns.values)
 
     output1 = pd.DataFrame(index=var.original_biomass_data[sp]["x"])
     output1["usda_soil"] = var.original_soil_data[sp]["y"]
     output1["usda_biomass"] = var.original_biomass_data[sp]["y"]
-    output1.to_csv(f"full_params_run_results\\{sp}_usda.csv")
+    output1.to_csv(f"05_full_params_run_results\\{sp}_usda.csv")
 
     output2 = pd.DataFrame(index=range(-1, max_year + 1))
     output3 = pd.DataFrame(index=range(-1, max_year + 1))
 
     for col in pcols:
+        oprint(f"\t{col}")
         scenario = sbcm.Scenario(sp)
         scenario.forest_variables = pdata[col][2:9]
         #        print(pdata[col][2:9])
@@ -69,8 +73,8 @@ for sp in spp:
         output2[f"{col} biomass"] = rept["biomass_carbon"]  # [2:]
         output3[f"{col} soil"] = rept["soil_carbon"]  # [2:]
 
-    output2.to_csv(f"full_params_run_results\\{sp}_sbcm_bio.csv")
-    output3.to_csv(f"full_params_run_results\\{sp}_sbcm_soil.csv")
+    output2.to_csv(f"05_full_params_run_results\\{sp}_sbcm_bio.csv")
+    output3.to_csv(f"05_full_params_run_results\\{sp}_sbcm_soil.csv")
 
     summary.loc[sp, "soil_max"] = output3.max(axis=1)[max_year]
     summary.loc[sp, "soil_min"] = output3.min(axis=1)[max_year]
@@ -90,4 +94,5 @@ for sp in spp:
 
 if __name__ == "__main__":
     output3.to_clipboard()
-summary.to_csv(f"full_params_run_results\\eqm_summary.csv")
+    winsound.Beep(262, 500) # In case you care, this is middle C (more or less)
+summary.to_csv(f"05_full_params_run_results\\eqm_summary.csv")

@@ -23,7 +23,7 @@ for sp in species_list:
 
     out[sp] = [spinup_scenario.biomass, spinup_scenario.soil]
 
-out.to_csv("biomass_equilibrium_results\\biomass_equilibrium_500_results.csv")
+out.to_csv("01_biomass_equilibrium_results\\biomass_equilibrium_500_results.csv")
 if __name__ == "__main__":
     print(out.T)
     out.to_clipboard()

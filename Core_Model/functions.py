@@ -55,7 +55,7 @@ import math as m
 
 # ------------------------------------------------------------------------------
 def energy2fuel(energy, eff1, eff2):
-    """calculates fuel energy requirement (in GJ) based on energy required and
+    """calculates fuel energy requirement (in GJ) based on energy demand and
     efficiencies of production and use. Inverse of fuel2energy
     From Sterman et al (2018) """
     fuel = energy / (eff1 * eff2)

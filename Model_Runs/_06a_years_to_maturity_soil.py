@@ -14,7 +14,7 @@ summary = pd.DataFrame(index=var.SPP, columns=s_cols)
 
 for sp in spp:
     sp_summary = pd.DataFrame()
-    data = pd.read_csv(f"full_params_run_results\\{sp}_sbcm_soil.csv", index_col=0)
+    data = pd.read_csv(f"05_full_params_run_results\\{sp}_sbcm_soil.csv", index_col=0)
     cols = list(data.columns.values)
     values = []
 
@@ -44,8 +44,8 @@ for sp in spp:
         summary.loc[sp, "min"] = 999  # min(values)
         summary.loc[sp, "mean"] = 999  # int(np.round(np.mean(values), 0))
 
-    sp_summary.to_csv(f"years_to_maturity_results\\{sp}_maturity_soil.csv")
+    sp_summary.to_csv(f"06_years_to_maturity_results\\{sp}_maturity_soil.csv")
 
 if __name__ == "__main__":
     print(summary)
-summary.to_csv(f"years_to_maturity_results\\years to maturity (soil).csv")
+summary.to_csv(f"06_years_to_maturity_results\\years to maturity (soil).csv")

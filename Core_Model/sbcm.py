@@ -23,15 +23,6 @@ Scenario
     spinup
     describe
 
-Ensemble
-    __init__
-    run
-    sub_report
-    report
-
-
-
-
 """
 # Libraries
 import pandas as pd
@@ -64,8 +55,8 @@ class Scenario:
             "phi_bs": fv[spp]["phi_bs"],
             "phi_sa": fv[spp]["phi_sa"],
         }
-        self.cf_variables = var.coal_use
-        self.bio_variables = var.forest_use
+        self.cf_variables = var.new_coal_use
+        self.bio_variables = var.new_forest_use
 
         # Starting conditions - these can be varied but are set to initial values
         # based on Sterman et al.
@@ -94,6 +85,7 @@ class Scenario:
         self.bio_emission = 0.0
         self.felled_biomass = 0.0
         self.carbon_saved = 0.0
+        self.gross_carbon_debt = 0.0
 
         # Output variables (lists)
         self.time_list = [-1]
@@ -349,36 +341,24 @@ class Scenario:
 if __name__ == "__main__":
 
     def rpt(scn):
-        print(f"soil = {scn.soil}, forest = {scn.biomass}\n")
+        """Just report the soil and forest carbon"""
+        print(f"soil = {scn.soil}, forest = {scn.biomass}, area={scn.area}\n")
 
     print("Testing basic growth model\n")
-    sp = "SE_SLP"
+    sp = "SC_SLP"
     x = Scenario(sp)
-    x.felling_intensity = 1
-    print("Equilibrium values")
-    rpt(x)
+    x.felling_intensity = 0.95
+    x.cf_variables = var.coal_use
+    x.bio_variables = var.forest_use
+    print(x.soil)
 
-    print("Initialised values")
     x.initialise()
     rpt(x)
-
-    #    x.spinup()
-    #    rpt(x)
-
-    print("Smith starting values")
-    print(f"forest start = {x.forest_start}")
-    print(f"soil start = {x.soil_start}\n")
-
-    x.biomass = var.forest_variables[sp]["forest_start"]
-    x.soil = var.forest_variables[sp]["soil_start"]
-    print("artificial starting values")
-    rpt(x)
-
-    #    x.biomass_carbon_list[0] = x.forest_start
-    #    x.soil_carbon_list[0] = x.soil_start
 
     for _ in range(500):
         x.runstep()
 
     r = x.report()
+    print(x.payback)
+
     r.to_clipboard()
