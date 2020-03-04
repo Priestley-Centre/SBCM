@@ -1,6 +1,6 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-#Getting Started
+# Getting Started
 1. If you don't already have python installed, you should first go [here](https://www.anaconda.com/distribution/) and install the anaconda distribution. 
 The model does not require any python libraries that are not already included in the distribution (primarily pandas, numpy, and matplotlib) so you should not need to install anything else. If you do, this is easy to install from the Python command line using either the >conda install [package] or >pip install [package]
 2.  Download the model to your own computer. You can do this using the github desktop software, or just as a simple download.
