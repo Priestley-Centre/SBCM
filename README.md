@@ -2,8 +2,10 @@
 # SBCM
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Priestley-Centre/SBCM?include_prereleases)
 ![GitHub](https://img.shields.io/github/license/Priestley-Centre/SBCM)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3697774.svg)](https://doi.org/10.5281/zenodo.3697774)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+## Version control
+0.9 [![v 0.9 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3697774.svg)](https://doi.org/10.5281/zenodo.3697774)
 
 ## Getting Started
 1. If you don't already have python installed, you should first go [here](https://www.anaconda.com/distribution/) and install the anaconda distribution. 
