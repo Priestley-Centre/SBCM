@@ -1,6 +1,6 @@
 
 # SBCM
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Priestley-Centre/SBCM?include_prereleases)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Priestley-Centre/SBCM?include_prereleases)(https://github.com/Priestley-Centre/SBCM)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ## Getting Started
