@@ -1,7 +1,6 @@
 
 # SBCM 1.0 
-[![GitHub commits](https://img.shields.io/github/commits-since/Naereen/StrapDown.js/v0.0.0.svg)](https://github.com/Priestley-Centre/SBCM/commits/master)
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Priestley-Centre/SBCM/blob/master/LICENSE) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) [![Github all releases](https://img.shields.io/github/downloads/Naereen/StrapDown.js/total.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
+![GitHub All Releases](https://img.shields.io/github/downloads/Priestley-Centre/SBCM/total) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ## Getting Started
 1. If you don't already have python installed, you should first go [here](https://www.anaconda.com/distribution/) and install the anaconda distribution. 
