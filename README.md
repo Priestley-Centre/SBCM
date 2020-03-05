@@ -5,7 +5,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ## Version control
-0.9 [![v 0.9 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3697774.svg)](https://doi.org/10.5281/zenodo.3697774)
+Version 0.9 pre-release [![v 0.9 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3697774.svg)](https://doi.org/10.5281/zenodo.3697774)
 
 ## Getting Started
 1. If you don't already have python installed, you should first go [here](https://www.anaconda.com/distribution/) and install the anaconda distribution. 
