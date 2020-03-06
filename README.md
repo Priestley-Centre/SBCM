@@ -5,6 +5,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ## Version control
+Version 0.91 Pre-Release [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3698992.svg)](https://doi.org/10.5281/zenodo.3698992)
 Version 0.9 pre-release [![v 0.9 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3697774.svg)](https://doi.org/10.5281/zenodo.3697774)
 
 ## Getting Started
