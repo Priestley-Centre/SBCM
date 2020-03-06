@@ -7,8 +7,6 @@
 ## Version control
 Version 0.91 Pre-Release [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3698992.svg)](https://doi.org/10.5281/zenodo.3698992)
 
-Version 0.9 pre-release [![v 0.9 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3697774.svg)](https://doi.org/10.5281/zenodo.3697774)
-
 ## Getting Started
 1. If you don't already have python installed, you should first go [here](https://www.anaconda.com/distribution/) and install the anaconda distribution. 
 The model does not require any python libraries that are not already included in the distribution (primarily pandas, numpy, and matplotlib) so you should not need to install anything else. If you do, this is easy to install from the Python command line using either the >conda install [package] or >pip install [package]
