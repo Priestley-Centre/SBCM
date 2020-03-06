@@ -6,6 +6,7 @@
 
 ## Version control
 Version 0.91 Pre-Release [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3698992.svg)](https://doi.org/10.5281/zenodo.3698992)
+
 Version 0.9 pre-release [![v 0.9 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3697774.svg)](https://doi.org/10.5281/zenodo.3697774)
 
 ## Getting Started
