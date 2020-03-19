@@ -46,5 +46,5 @@ The calculations used to write the paper are all contained here. They are all nu
 
 ## Code Edits & bug reports 
 We absolutely want this code to be freely available, and welcome any useful modifications, upgrades, and bug reports.
-Please do be aware, however that 1) this is not the most up to date version of the model (simply a snapshot showing the status of the model when the __paper__ was written) and 2) we would like this version to remain as is for reference. 
+Please do be aware, however that this code is live and being worked on frequently, so it would probably be a good idea to contact the author first to make sure that you won't break something important or that your idea is not already being worked on.
 
