@@ -1,5 +1,5 @@
 
-# SBCM
+# Simple Bioenergy Comparison Model
 [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Priestley-Centre/SBCM?include_prereleases)](https://github.com/Priestley-Centre/SBCM/releases)
 [![GitHub](https://img.shields.io/github/license/Priestley-Centre/SBCM)](https://github.com/Priestley-Centre/SBCM/blob/master/LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
