@@ -5,7 +5,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ## Version control
-This is version 0.9. Pre-release. It is broadly equivalent to the supplementary materials available with the paper introuding the model: (DOI https://doi.org/10.1088/2515-7620/ab7ff3). There are a few tweaks and updates required before we get to version 1.0 though. 
+This is version 0.9. Pre-release. It is broadly equivalent to the supplementary materials available with the paper introducing the model: (DOI https://doi.org/10.1088/2515-7620/ab7ff3). There are a few tweaks and updates required before we get to version 1.0 though. 
 
 ## Getting Started
 1. If you don't already have python installed, you should first go [here](https://www.anaconda.com/distribution/) and install the anaconda distribution. 
