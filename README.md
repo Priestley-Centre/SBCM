@@ -11,6 +11,9 @@ This is version 0.9. Pre-release. It is broadly equivalent to the supplementary 
 With the publication of a paper introducing the model now having passed peer review and being published, we will be making some changes. The model runs that we have included here will be attached to **Version 1** of the model (which will have a formal release) and will then be removed. This is because subsequent editions of the model will be using a different framework and they will not run on the same version. If you still want to see the files, they will be attached to the paper along with a copy of the model that they are designed to use, or you can go to the releases page and download version 1 (which will have them bundled with it).
 Subsequent changes will require a new version and a clearing of the decks, and this is the version which will be available from the front page.
 
+**If this is not making sense, then don't worry - I'll be working on this quite a bit over the next few days, and it should all become clear soon.**
+
+
 ## Getting Started
 1. If you don't already have python installed, you should first go [here](https://www.anaconda.com/distribution/) and install the anaconda distribution. 
 The model does not require any python libraries that are not already included in the distribution (primarily pandas, numpy, and matplotlib) so you should not need to install anything else. If you do, this is easy to install from the Python command line using either the >conda install [package] or >pip install [package]
