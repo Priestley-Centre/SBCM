@@ -5,7 +5,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ## Version control
-This is version 0.9. Pre-release. It is broadly equivalent to the supplementary materials available with the paper introducing the model: (DOI https://doi.org/10.1088/2515-7620/ab7ff3). There are a few tweaks and updates required before we get to version 1.0 though. 
+This is version 0.9. Pre-release. It is broadly equivalent to the supplementary materials available with the paper introducing the model: (DOI https://doi.org/10.1088/2515-7620/ab7ff3). There are a few tweaks and updates required before we get to version 1.0 though (mostly to the documentation). 
 
 ## Changes coming soon
 With the publication of a paper introducing the model now having passed peer review and being published, we will be making some changes. The model runs that we have included here will be attached to **Version 1** of the model (which will have a formal release) and will then be removed. This is because subsequent editions of the model will be using a different framework and they will not run on the same version. If you still want to see the files, they will be attached to the paper along with a copy of the model that they are designed to use, or you can go to the releases page and download version 1 (which will have them bundled with it).
