@@ -15,9 +15,11 @@ List of all functions goes here:
     fuel2emission
     emission2fuel
 
+    growth
     co2_fertilisation
     tonnes2ppm
-    growth
+    missing_elements # This and payback operate together
+    payback
 
 Diagram of how the interlinked equations relate to one another.
 

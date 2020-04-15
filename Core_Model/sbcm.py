@@ -5,14 +5,8 @@
 """A simple model designed to compare the relative emissions associated with
 electricity generation from biomass and coal. The original version was based
 on a model by Sterman et al discussed in Sterman et al (2018)
-"Does replacing coal with wood lower CO2 emissions? Dynamic lifecycle
-analysis of wood bioenergy" DOI 10.1088/1748-9326/aaa512/
-
-Notes:
-    https://numpydoc.readthedocs.io/en/latest/format.html for docstring formatting
-
-Outline of file structure
-TODO explain why they are in a funny order
+Does replacing coal with wood lower CO2 emissions? Dynamic lifecycle
+analysis of wood bioenergy DOI 10.1088/1748-9326/aaa512/
 
 Scenario
     __init__
