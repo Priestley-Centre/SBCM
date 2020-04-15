@@ -16,4 +16,4 @@ This project is in ongoing development as part of a PhD by [Will Rolls](https://
 
 ## References
 
-Rolls, W. and Forster, P., 2020. Quantifying forest growth uncertainty on carbon payback times in a simple biomass carbon model. [*Environmental Research Communications*](https://iopscience.iop.org/article/10.1088/2515-7620/ab7ff3).
+- Rolls, W. and Forster, P., 2020. Quantifying forest growth uncertainty on carbon payback times in a simple biomass carbon model. [*Environmental Research Communications*](https://iopscience.iop.org/article/10.1088/2515-7620/ab7ff3).
