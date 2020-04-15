@@ -14,7 +14,7 @@ This project is in ongoing development as part of a PhD by [Will Rolls](https://
 
 ### Current version
 
-- Version 1.0 The same code as included in the supplementary materials available with the [Rolls, W. and Forster, P., 2020.](https://iopscience.iop.org/article/10.1088/2515-7620/ab7ff3). Revised and updated documentation.
+- [Version 1.0](https://github.com/Priestley-Centre/SBCM/releases/tag/1.0) The same code as included in the supplementary materials available with the [Rolls, W. and Forster, P., 2020.](https://iopscience.iop.org/article/10.1088/2515-7620/ab7ff3). Revised and updated documentation.
 
 ### Old versions
 
