@@ -1,7 +1,7 @@
 # Getting Started
 1. If you don't already have python installed, you should first go [here](https://www.anaconda.com/distribution/) and install the anaconda distribution. 
 2. Download the model to your own computer. You can do this using the github desktop software, or just as a simple zip file.
-3. We have tried to avoid using python libraries that are not already included in the distribution (we mostly use pandas, numpy, and matplotlib) so you should not need to install anything else. There is a list of third pary modules requirements in `dependencies.md`
+3. We have tried to avoid using python libraries that are not already included in the distribution so you should not need to install anything else. There is a list of module requirements in `dependencies.md`
 4. The model was designed and implemented using the [spyder](https://www.spyder-ide.org/) IDE (which comes bundled with anaconda) and while it should operate using alternatives, it has not been tested under different frameworks. 
 5. Spyder allows you to run specific code at the beginning of each session (you can find this under `tools>preferences>ipython console>startup`) You need to use this to make sure that python can recognise where the model is located. Set up a new python file with code similar to `setup.py`(in this repository) and add it to the "run a file" option of the spyder startup tab.
 6. While we see no barrier to the code working on a variety of operating systems, it has only been tested in windows (so other operating systems may require modifications to these instructions.)
