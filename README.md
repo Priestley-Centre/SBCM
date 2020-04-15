@@ -8,13 +8,17 @@ SBCM began life as an open-source implementation of the model described by [Ster
 
 This project is in ongoing development as part of a PhD by [Will Rolls](https://www.researchgate.net/profile/Will_Rolls2). The version here is being actively worked on and may not represent the most recent iteration. Details on bug reporting or how to contribute are in the [documentation folder](https://github.com/Priestley-Centre/SBCM/blob/master/Documentation) 
 
-**Information on getting started, is available [here](https://github.com/Priestley-Centre/SBCM/blob/master/Documentation/Quickstart.md).**
+**Information on getting started is available [here](https://github.com/Priestley-Centre/SBCM/blob/master/Documentation/Quickstart.md).**
 
 ## Version control / changelog
 
 ### Current version
 
-- Version 0.9 Pre-release. Broadly equivalent to the supplementary materials available with the [paper introducing the model](https://iopscience.iop.org/article/10.1088/2515-7620/ab7ff3). There are a few tweaks and updates required before we get to version 1.0, mostly to the documentation. 
+- Version 1.0 The same code as included in the supplementary materials available with the [paper introducing the model](https://iopscience.iop.org/article/10.1088/2515-7620/ab7ff3). Revised and updated documentation.
+
+### Old versions
+
+- Version 0.9 Pre-release. Broadly equivalent to the supplementary materials available with the [paper introducing the model](https://iopscience.iop.org/article/10.1088/2515-7620/ab7ff3).
 
 ## References
 
