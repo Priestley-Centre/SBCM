@@ -18,7 +18,7 @@ This project is in ongoing development as part of a PhD by [Will Rolls](https://
 
 ### Old versions
 
-- Version 0.9. Pre-release. Broadly equivalent to the supplementary materials available with the [Rolls, W. and Forster, P., 2020.](https://iopscience.iop.org/article/10.1088/2515-7620/ab7ff3). Downloadable [here](https://github.com/Priestley-Centre/SBCM/releases).
+- [Version 0.9](https://github.com/Priestley-Centre/SBCM/releases/tag/v0.91). Pre-release. Broadly equivalent to the supplementary materials available with the [Rolls, W. and Forster, P., 2020.](https://iopscience.iop.org/article/10.1088/2515-7620/ab7ff3).
 
 ## Articles using this model
 
