@@ -20,6 +20,6 @@ This project is in ongoing development as part of a PhD by [Will Rolls](https://
 
 - Version 0.9. Pre-release. Broadly equivalent to the supplementary materials available with the [Rolls, W. and Forster, P., 2020.](https://iopscience.iop.org/article/10.1088/2515-7620/ab7ff3). Downloadable [here](https://github.com/Priestley-Centre/SBCM/releases).
 
-## References
+## Articles using this model
 
 - Rolls, W. and Forster, P., 2020. Quantifying forest growth uncertainty on carbon payback times in a simple biomass carbon model. [*Environmental Research Communications*](https://iopscience.iop.org/article/10.1088/2515-7620/ab7ff3).
