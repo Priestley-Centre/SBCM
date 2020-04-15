@@ -14,11 +14,11 @@ This project is in ongoing development as part of a PhD by [Will Rolls](https://
 
 ### Current version
 
-- Version 1.0 The same code as included in the supplementary materials available with the [paper introducing the model](https://iopscience.iop.org/article/10.1088/2515-7620/ab7ff3). Revised and updated documentation.
+- Version 1.0 The same code as included in the supplementary materials available with the [Rolls, W. and Forster, P., 2020.](https://iopscience.iop.org/article/10.1088/2515-7620/ab7ff3). Revised and updated documentation.
 
 ### Old versions
 
-- Version 0.9. Pre-release. Broadly equivalent to the supplementary materials available with the [paper introducing the model](https://iopscience.iop.org/article/10.1088/2515-7620/ab7ff3). Downloadable [here](https://github.com/Priestley-Centre/SBCM/releases).
+- Version 0.9. Pre-release. Broadly equivalent to the supplementary materials available with the [Rolls, W. and Forster, P., 2020.](https://iopscience.iop.org/article/10.1088/2515-7620/ab7ff3). Downloadable [here](https://github.com/Priestley-Centre/SBCM/releases).
 
 ## References
 
