@@ -1,8 +1,8 @@
 
 # Simple Biomass Comparison Model
 [![GitHub release (latest by date including pre-releases)](https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&url=https://img.shields.io/github/v/release/Priestley-Centre/SBCM)](https://github.com/Priestley-Centre/SBCM/releases)
-[![GitHub](https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&url=https://img.shields.io/github/license/Priestley-Centre/SBCM)](https://github.com/Priestley-Centre/SBCM/blob/master/LICENSE)
-[![Code style: black](https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&url=https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![GitHub](https://github.com/Priestley-Centre/SBCM/blob/master/Documentation/MIT.svg)](https://github.com/Priestley-Centre/SBCM/blob/master/Documentation/LICENSE)
+[![Code style: black](https://github.com/Priestley-Centre/SBCM/blob/master/Documentation/black.svg)](https://github.com/psf/black)
 
 SBCM began life as an open-source implementation of the model described by [Sterman et al. (2018)](https://iopscience.iop.org/article/10.1088/1748-9326/aaa512) to calculate estimates of carbon payback periods for the use of biomass fuel. We chose this model (which is simple, well described, and relatively easy to reproduce) to address the wide range of different experimental assumptions and methods that have been developed when looking at the carbon benefits and costs associated with using biomass fuel. This included transferring it to fully open source code instead of the original proprietary platform (Vensim). In the process we identified a number of inconsistencies and errors within the original model and have built on the initial assumptions and parameterisations to produce a new tool for comparing calculations within the literature. 
 
