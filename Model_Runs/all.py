@@ -14,7 +14,8 @@ note = """
                     really be sure until you have allowed the code to
                     run for a good long time. In particular, stages
                     2 and 5 are very slow (5 minutes plus) so I recommend
-                    a tea break while it all chugs away. ~WR
+                    a tea break while it all chugs away. The whole thing 
+                    takes about 25 minutes on my machine ~WR
 
 ########################################################################################
 
