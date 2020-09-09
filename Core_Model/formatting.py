@@ -17,7 +17,7 @@ def mpl_font_setup(font_type="times New Roman"):
     """
     """
     try:
-        # This is bnecessary to correct the weird mpl handling of italic TNR
+        # This is necessary to correct the weird mpl handling of italic TNR
         del matplotlib.font_manager.weight_dict["roman"]
         matplotlib.font_manager._rebuild()
     # https://stackoverflow.com/a/44386835/4741979
