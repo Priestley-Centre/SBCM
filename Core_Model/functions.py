@@ -194,7 +194,7 @@ def payback(l, n=10):
     """
     result = []
     x = list(missing_elements(l, -1, len(l) - 1))
-    #    print(x)
+    #print(x)
     result.append(max(x) + 1)
     for _ in range(n):
         try:
