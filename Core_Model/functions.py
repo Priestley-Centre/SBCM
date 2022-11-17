@@ -59,7 +59,7 @@ import math as m
 def energy2fuel(energy, eff1, eff2):
     """calculates fuel energy requirement (in GJ) based on energy demand and
     efficiencies of production and use. Inverse of fuel2energy
-    From Sterman et al (2018) """
+    From Sterman et al (2018)"""
     fuel = energy / (eff1 * eff2)
     return fuel
 
@@ -78,7 +78,7 @@ def fuel2forest(emit2, fuel, fell_int, biomass):
     """calculates area of forest needed to supply fuel energy, based on the
     intensity of emission, fuel energy required, felling intensity
     and biomass present on a forest site. Inverse of forest2fuel.
-    From Sterman et al (2018) """
+    From Sterman et al (2018)"""
     area = emit2 * (fuel / (fell_int * biomass))
     return area
 
@@ -96,7 +96,7 @@ def forest2fuel(emit2, area, fell_int, biomass):
 def fuel2emission(fuel, emit1, emit2):
     """calculates carbon emissions based on the amount of fuel used (GJ) and
     the carbon intensities of production and use (emit1 and emit2)
-    Inverse of emission2fuel. From Sterman et al (2018) """
+    Inverse of emission2fuel. From Sterman et al (2018)"""
     emission = fuel * (emit1 + emit2)
     return emission
 
@@ -162,14 +162,13 @@ def co2_fertilisation(co2_now=760, co2_then=590, biostimm=0.42):
 # ------------------------------------------------------------------------------
 def tonnes2ppm(t):
     """converts x tonnes of carbon to ppm atmospheric concentration CO2"""
-    gt = t * 10 ** -9
+    gt = t * 10**-9
     return gt * 0.471
 
 
 # ------------------------------------------------------------------------------
 def missing_elements(L, start, end):
-    """
-    """
+    """ """
     if end - start <= 1:
         if L[end] - L[start] > 1:
             yield from range(L[start] + 1, L[end])
@@ -190,11 +189,10 @@ def missing_elements(L, start, end):
 
 # ------------------------------------------------------------------------------
 def payback(l, n=10):
-    """
-    """
+    """ """
     result = []
     x = list(missing_elements(l, -1, len(l) - 1))
-    #print(x)
+    # print(x)
     result.append(max(x) + 1)
     for _ in range(n):
         try:

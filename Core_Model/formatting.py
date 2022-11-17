@@ -14,8 +14,7 @@ from variables import SPP as spp
 
 
 def mpl_font_setup(font_type="times New Roman"):
-    """
-    """
+    """ """
     try:
         # This is necessary to correct the weird mpl handling of italic TNR
         del matplotlib.font_manager.weight_dict["roman"]

@@ -19,7 +19,7 @@ def rmse(y1, y2):
 
 
 def growth(x, pb, ps, B, phi_ab, k, v, phi_ba, phi_bs, phi_sa):
-    """ Chapman Richards Growth Function as used by Sterman et al 2018
+    """Chapman Richards Growth Function as used by Sterman et al 2018
     based on a range of parameters (described more fully in the model code) and
     a biomass switch (either 1 or 0) which controls whether biomass carbon or
     soil carbon results are returned

@@ -16,7 +16,7 @@ def rmse(y1, y2):
 
 
 def growth(x, pb, ps, B, phi_ab, k, v, phi_ba, phi_bs, phi_sa, biomass_switch):
-    """ Chapman Richards Growth Function as used by Sterman et al 2018
+    """Chapman Richards Growth Function as used by Sterman et al 2018
     based on a range of parameters (described more fully in the model code) and
     a biomass switch (either 1 or 0) which controls whether biomass carbon or
     soil carbon results are returned
@@ -56,7 +56,7 @@ def growth(x, pb, ps, B, phi_ab, k, v, phi_ba, phi_bs, phi_sa, biomass_switch):
 
 
 def combinedFunction(comboData, pb, ps, B, phi_ab, k, v, phi_ba, phi_bs, phi_sa):
-    """ A function for merging the calculations for soil and biomass carbon to
+    """A function for merging the calculations for soil and biomass carbon to
     allow curve-matching of all parameters against 2 data-sets simultaneously"""
     # single data reference passed in, extract separate data
     extract1 = comboData[: len(x)]  # soil data
@@ -238,9 +238,17 @@ with pd.ExcelWriter(
                         run_name = f"{SP} {m}_{l} {cons}"  # Add a label
 
                         # take the fitted parameters and associate them correctly
-                        forest_start, soil_start, B, phi_ab, k, v, phi_ba, phi_bs, phi_sa = (
-                            fittedParameters
-                        )
+                        (
+                            forest_start,
+                            soil_start,
+                            B,
+                            phi_ab,
+                            k,
+                            v,
+                            phi_ba,
+                            phi_bs,
+                            phi_sa,
+                        ) = fittedParameters
 
                         # re-run the growth model to get explicit results
                         biomass_result = growth(

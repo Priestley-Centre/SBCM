@@ -28,8 +28,7 @@ from variables import forest_variables as fv
 
 
 class Scenario:
-    """Sets up a felling and counterfactual scenario for comparison
-    """
+    """Sets up a felling and counterfactual scenario for comparison"""
 
     def __init__(self, spp):
         """
@@ -38,7 +37,7 @@ class Scenario:
         TODO More info to go here if there is time.
         """
         # Input Variables
-        self.energy = 1 * 10 ** 9
+        self.energy = 1 * 10**9
         self.spp = spp
         self.forest_variables = {
             "B": fv[spp]["B"],
@@ -244,8 +243,7 @@ class Scenario:
         self.age = self.age + 1
 
     def report(self, verbose=False):
-        """ returns a pandas dataframe with all the gubbins in.
-        """
+        """returns a pandas dataframe with all the gubbins in."""
         # set up dataframe
         output = pd.DataFrame(index=self.time_list)
         if verbose:  # <-- printed output, if the lists don't come out at the right
@@ -289,8 +287,7 @@ class Scenario:
         return output
 
     def spinup(self, n=10, verbose=False):
-        """runs the model like a maniac until we have an indication of equilibrium values
-        """
+        """runs the model like a maniac until we have an indication of equilibrium values"""
         if (
             self.fell_age is False and verbose is True
         ):  # <-- skip if we've already got values
@@ -305,8 +302,7 @@ class Scenario:
                 # and soil values
 
     def describe(self):
-        """ Gives a brief printed summary of the scenario
-        """
+        """Gives a brief printed summary of the scenario"""
         ha = self.area
         km = self.area * 0.01
         site_ha = f"{ha:,.0f}ha"
