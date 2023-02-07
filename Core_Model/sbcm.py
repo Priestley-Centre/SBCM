@@ -25,7 +25,6 @@ import functions as func
 import formatting as form
 import variables as var
 from variables import forest_variables as fv
-from payback import implement as imp
 
 
 class Scenario:
@@ -274,25 +273,17 @@ class Scenario:
         output["carbon_saved"] = self.carbon_saved_list
 
         # try and work out time to payback
-        # method 1
-        if verbose == True:
-            print(len(output["bio_emissions"]), len(output["cf_emissions"]))
-            print(len(output.index.values))
-        pb = imp(output["bio_emissions"], output["cf_emissions"])
-        self.payback = pb
-        # print(pb)
-
-        # try:  # <-- this doesn't always work, so if we Try, it just skips it on failure
-        #     payback = output.index[
-        #         output["bio_emissions"] <= output["cf_emissions"]
-        #     ].tolist()
-        #     #            print(payback)
-        #     result = func.payback(payback)
-        #     if verbose == True:
-        #         print(f"Payback occurs during year(s) = {str(result).strip('[]')}")
-        #     self.payback = result
-        # except:
-        #     pass  # <-- just skip joyfully on if it doesn't work.
+        try:  # <-- this doesn't always work, so if we Try, it just skips it on failure
+            payback = output.index[
+                output["bio_emissions"] <= output["cf_emissions"]
+            ].tolist()
+            #            print(payback)
+            result = func.payback(payback)
+            if verbose == True:
+                print(f"Payback occurs during year(s) = {str(result).strip('[]')}")
+            self.payback = result
+        except:
+            pass  # <-- just skip joyfully on if it doesn't work.
         return output
 
     def spinup(self, n=10, verbose=False):
